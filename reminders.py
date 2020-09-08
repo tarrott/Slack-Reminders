@@ -1,8 +1,8 @@
 import os
 
 from apscheduler.schedulers.blocking import BlockingScheduler
-from tzlocal import get_localzone
 import requests
+import tzlocal
 
 webhook = os.environ["SLACK_WEBHOOK"]
 timezone = os.environ["TIMEZONE"]
@@ -52,7 +52,7 @@ def schedule_reminders(reminders):
 
 
 if __name__ == "__main__":
-    local_timezone = get_localzone()
+    local_timezone = tzlocal.get_localzone()
     print(f"The local timezone is {local_timezone}")
 
     with open('reminders.txt', 'r') as f:
