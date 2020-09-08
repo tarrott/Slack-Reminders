@@ -1,0 +1,5 @@
+event-1 * 5 30
+event-2 mon-fri * 4
+event-3 sat 17 10
+event-4 * */4 28
+event-5 * 8,12,16,20,0 15
