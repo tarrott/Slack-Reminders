@@ -31,7 +31,7 @@ def send_reminder(message):
     try:
         response = requests.post(webhook, data)
     except Exception as e:
-        print(f"{str(response.status_code)}: {response.text}")
+        print(f"ERROR ({str(response.status_code)}): {response.text}")
         print(e)
 
 
